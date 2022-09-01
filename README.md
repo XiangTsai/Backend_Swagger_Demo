@@ -1,3 +1,5 @@
+Testing 2022/09/01
+
 # Django Backend with Swagger UI
 - 安裝套件
 - 建立 Model 和 ORM 操作
@@ -20,7 +22,30 @@
 pip3 install -r requirements.txt
 ```
 
-套件安裝好後需要加入到 /app/settings.py 中
+套件安裝好後須先建立 Django 專案 `startproject app` 和服務 `startapp core`
+```
+.
+├── app
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── core
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── main.py
+├── manage.py
+└── requirements.txt
+```
+
+需要加入到 /app/settings.py 中
 ```python
 ...
 
@@ -63,6 +88,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 ## 建立 Model 和 ORM 操作
 根據物件導向程式設計，大多數時候都是對物件進行操作，因此我們會將物件寫在 core/models.py 中，而在 models.py 的物件時常都和資料表有所關聯，例如 User 資料表與 User 物件有強烈關係
 因此透過物件關聯對映 (ORM) 可以幫助我們將建立好的物件直接轉換成資料表，並且若底層資料庫有需要替換時，也可透過 ORM 自動生成，減少手動創建的成本，也可解決資料庫與物件無法對應的錯誤
+![image](https://user-images.githubusercontent.com/22998999/185399594-7ab34333-b35a-4968-9947-61556b1142d0.png)
 
 ORM 介紹：https://medium.com/tds-note/orm-v-s-sql-91e003089a61
 
