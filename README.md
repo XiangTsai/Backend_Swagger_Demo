@@ -1,3 +1,5 @@
+Testing 2022/09/01
+
 # Django Backend with Swagger UI
 - 安裝套件
 - 建立 Model 和 ORM 操作
